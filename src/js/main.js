@@ -1,4 +1,7 @@
 $(document).ready(function(){
+
+  console.log("Funciono ------- ----- ------ ----> ");
+
   // Call Ajax for README.md
   $.ajax({
     dataType: "text",
@@ -31,7 +34,7 @@ $(document).ready(function(){
         $('#result').append(
           '<pre><code class="language-javascript" id="' + valid[index] + '"></code></pre>'
         );
-        $( "#" + valid[index] ).load("practices/" + valid[index] + ".js");
+        $( "#" + valid[index] ).load("./practices/" + valid[index] + ".js");
     }
     // Load prism-core
     let prism = document.createElement("script");
